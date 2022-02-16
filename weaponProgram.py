@@ -15,27 +15,27 @@ HINT: Follow the comments for each line to help with the logic of the problem.
 
 
 # create a file object to open the file in read mode
-
+outfile = open('weapons.txt','r')
 
 
 # create a csv object from the file object
-
+final = open('final.csv','w')
 
 
 #skip the header row
-
+next(final)
 
 
 
 #create an empty dictionary named 'weapons_dict'
-
+weapons_dict = {}
 
 
 
 #use a for loop to iterate through every row of the csv file
-
+for i in outfile:
     #use variables for name,speed and range (optional)
-    
+
 
     # create an instance of the weapon object using the 
     # specs from the csv file (name,speed and range) 
@@ -46,13 +46,13 @@ HINT: Follow the comments for each line to help with the logic of the problem.
 
 
     # print out the name of the weapon using the appropriate method of the object 
-    
+    print("Name:",)
     # print out the speed of the weapon using the appropriate method of the object
-    
+    print("Speed:",)
     # print out the range of the weapon using the appropriate method of the object
-    
+    print("Range:",)
     # print out the number of bullets of the weapon using the appropriate method of the object
-    
+    print("Bullets:",)
 
     #use an input statement to halt the program and wait for the user - 
     input("Press any key to fire the weapon")

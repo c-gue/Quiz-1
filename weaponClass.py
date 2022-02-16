@@ -22,6 +22,38 @@ every time the method is called. When the bullet count reaches zero, it should c
 the attribute 'status' to 'Inactive'
 
 '''
+class Weapon():
+    def __init__(self,name,mph,distance):
+        self.__Name = name
+        self.__Bullets = random.randint(10,10000)
+        self.__Speed = mph
+        self.__Range = distance
+        self.__Status = "Active"
+
+
+    def fire_bullet(self):
+        self.__Bullets -= 1
+
+    def status(self):
+        if self.__Bullets == 0:
+            self.__Status = 'Inactive'
+
+    def get_name(self):
+        return self.__Name
+
+    def get_bullets(self):
+        return self.__Bullets
+
+    def get_speed(self):
+        return self.__Speed
+
+    def get_range(self):
+        return self.__Range
+
+    def get_status(self):
+        return self.__Status
+
+
 
 
 
