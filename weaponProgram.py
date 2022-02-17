@@ -35,7 +35,6 @@ for line in outfile:
     #use variables for name,speed and range (optional)
     record = line.strip()
     weapons_list = record.split(',')
-    #print(weapons_list)
 
     wname = weapons_list[0]
     wspeed = weapons_list[1]
@@ -46,10 +45,10 @@ for line in outfile:
     weapon = w.Weapon(wname,wspeed,wdistance)
 
     # append the name and bullet count to 'weapons_dict'
-    weapons_dict['weapon name: '] = weapon.get_name()
-    weapons_dict['Number of bullets: '] = weapon.get_bullets()
+    weapons_dict[wname] = weapon.get_bullets()
 
     # print out the name of the weapon using the appropriate method of the object 
+    print()
     print("Name:",weapon.get_name())
     # print out the speed of the weapon using the appropriate method of the object
     print("Speed:",weapon.get_speed())
@@ -69,16 +68,17 @@ for line in outfile:
         # print out the bullet count every time the weapon is fired
         print('bullets remaining...',weapon.get_bullets(),end='\r')
 
+
     
 
 
 #using a loop print out the name and number of bullets from the dictionary
 
-for i in weapons_dict:
-    print(i)
+print()
+for key,value in weapons_dict.items():
+    print('weapon name: ',key,'\tNumber of bullets: ',value)
 
-
-
+outfile.close()
 
     
 
