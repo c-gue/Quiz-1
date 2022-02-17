@@ -52,6 +52,7 @@ class Weapon():
 
     def get_status(self):
         return self.__Status
+    
 
 
 
