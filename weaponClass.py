@@ -23,9 +23,9 @@ the attribute 'status' to 'Inactive'
 
 '''
 class Weapon():
-    def __init__(self,name,mph,distance):
-        self.__Name = name
-        self.__Bullets = random.randint(10,10000)
+    def __init__(self,wname,mph,distance):
+        self.__Name = wname
+        self.__Bullets = random.randint(10,20)
         self.__Speed = mph
         self.__Range = distance
         self.__Status = "Active"
