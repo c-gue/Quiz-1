@@ -19,7 +19,7 @@ outfile = open('weapons.txt','r')
 
 
 # create a csv object from the file object
-final = open('final.csv','w')
+#final = open('final.csv','w')
 
 
 #skip the header row
@@ -46,8 +46,8 @@ for line in outfile:
     weapon = w.Weapon(wname,wspeed,wdistance)
 
     # append the name and bullet count to 'weapons_dict'
-    weapons_dict[wname]
-    print(weapons_dict)
+    weapons_dict['weapon name: '] = weapon.get_name()
+    weapons_dict['Number of bullets: '] = weapon.get_bullets()
 
     # print out the name of the weapon using the appropriate method of the object 
     print("Name:",weapon.get_name())
@@ -63,19 +63,19 @@ for line in outfile:
     
 
     # use an appropriate loop to keep firing the weapon until all bullets run out
-    #while weapon.get_bullets() > 0:
+    while weapon.get_bullets() > 0:
         # call the appropriate method to fire a bullet
-        #weapon.fire_bullet()
+        weapon.fire_bullet()
         # print out the bullet count every time the weapon is fired
-        #print('bullets remaining...',weapon.get_bullets())
+        print('bullets remaining...',weapon.get_bullets(),end='\r')
 
     
 
 
 #using a loop print out the name and number of bullets from the dictionary
 
-#for i in weapons_dict:
-    #print(i)
+for i in weapons_dict:
+    print(i)
 
 
 
